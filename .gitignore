@@ -9,3 +9,10 @@ scylla_data/
 
 # Ignore environment variables (crucial for security!)
 .env
+
+# Secret key
+key
+key.pub
+
+# pdf assignment file
+`Data Engineer Assignment 2`.pdf
