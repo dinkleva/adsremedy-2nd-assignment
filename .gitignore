@@ -1,0 +1,11 @@
+# # Ignore a specific file
+# config.json
+
+# Ignore a specific folder
+scylla_data/
+
+# Ignore all files ending in .log
+*.log
+
+# Ignore environment variables (crucial for security!)
+.env
