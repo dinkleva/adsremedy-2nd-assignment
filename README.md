@@ -40,9 +40,15 @@ Originally, this project was scoped for ScyllaDB. However, during development, I
     sudo chmod 666 /var/run/docker.sock
     ```
 
+4.  **Final step to check if data is written to mongodb.**
+    ```bash
+    docker exec -it mongodb mongosh adsremedy --eval "db.daily_customer_totals.find().limit(5)"
+    ```
+
 ## Project Structure
 ```text
 ├── docker-compose.yml  # MongoDB service configuration
+├── data/               # Fake data and delta-table goes in this directory
 ├── dags/                # Orchestration script
 ├── scripts/             # Scripts for fake data generation, reading fake data and creating delta-table, and ETL script
 ├── .gitignore          # Properly configured to ignore data/ and .env
